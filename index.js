@@ -3,7 +3,7 @@ let lists = JSON.parse(localStorage.getItem("records"))
   : [
       {
         title: "Make bed",
-        date: newDate(),
+        date: new Date(),
         id: 1,
       },
     ];
@@ -13,7 +13,7 @@ function showItems(lists) {
   lists.forEach((record, i) => {
     document.querySelector(
       "#displayRecords"
-    ).innerHTML += `<li> ${record.title}</li>`;
+    ).innerHTML += `<li>  ${record.title}</li>`;
   });
 }
 
@@ -21,11 +21,12 @@ function addRecord() {
   //   e.preventDefault();
   lists.push({
     title: document.getElementById("title").value,
-    date: document.getElementById("date").value,
+    date: new Date(),
     id: lists.length + 1,
   });
   // save item
   showItems(lists);
+  console.log(lists);
   localStorage.setItem("records", JSON.stringify(lists));
 }
 
