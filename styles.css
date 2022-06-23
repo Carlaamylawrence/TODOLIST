@@ -6,15 +6,25 @@
 
 #displayRecords {
   list-style-type: none;
+  border: 2px solid black;
+  border-radius: 12%;
+  height: 400px;
+  background-color: rgb(255, 255, 255);
 }
 
-.cardcheckbox {
-  opacity: 0;
+li{
+  border: 4px solid  ;
+  background-color: pink;
+}
+.item{
+  padding: 10px;
 }
 
-.cardcheckbox:hover,
-.cardcheckbox:checked {
-  opacity: 1;
+input[type=checkbox]:checked {
+  text-decoration: line-through;
+} 
+.item:hover{
+
 }
 
 .card--3 {

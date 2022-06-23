@@ -13,7 +13,9 @@ function showItems(lists) {
   lists.forEach((record, i) => {
     document.querySelector(
       "#displayRecords"
-    ).innerHTML += `<li>  ${record.title}</li>`;
+    ).innerHTML += `<li class="item"> <input type="checkbox" id="complete"> ${record.title} <button class="delete">
+                <i class="far fa-trash-alt"></i>
+            </button></li>`;
   });
 }
 
@@ -45,9 +47,18 @@ function deleteRecord(id) {
 function loadDate() {
   console.table(lists);
 }
+function completed(){
+lists = document.querySelector('ul');
+lists.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'li') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
 
+}
 // add event listerner
 document.querySelector("#addRecord").addEventListener("click", addRecord);
+
 // delete record
 document.querySelector("#deleteRecord").addEventListener("click", (e) => {
   e.preventDefault();
