@@ -1,88 +1,116 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
-#displayRecords {
-  list-style-type: none;
-  border: 2px solid black;
-  border-radius: 12%;
-  height: 400px;
-  background-color: rgb(255, 255, 255);
-}
+section {
+    min-height: 100vh;
+    background-image: radial-gradient(circle, #f830d3, #f652d6, #f36ad9, #f07fdb, #ed91dc, #eb94dc, #ea97dd, #e89add, #e790dd, #e686dd, #e57bde, #e370de);
+  }
+  
+  body {
+    font-family: 'Bangers', cursive;
+  }
 
-li{
-  border: 4px solid  ;
-  background-color: pink;
-}
-.item{
-  padding: 10px;
-}
+  .container{
+    backdrop-filter: blur(10px);
+    opacity: 0.8;
 
-input[type=checkbox]:checked {
-  text-decoration: line-through;
-} 
-.item:hover{
+  }
 
-}
+  
+  ul {
+    list-style-type: none;
+  }
 
-.card--3 {
-  height: 100vh;
-  background: linear-gradient(
-      124.14deg,
-      rgba(255, 252, 243, 0) 20%,
-      rgba(255, 252, 243, 0.2) 39.82%,
-      rgba(255, 252, 243, 0) 60%
-    ),
-    radial-gradient(
-      154% 102% at 85% 32.47%,
-      rgba(255, 252, 243, 0) 49.82%,
-      rgba(230, 148, 247, 0.6) 82.11%
-    ),
-    radial-gradient(
-      124% 129% at 35% 78.47%,
-      rgba(255, 252, 243, 0) 49.82%,
-      rgba(255, 252, 243, 0.9) 82.11%
-    ),
-    radial-gradient(
-      125% 178% at 25% 4.47%,
-      rgba(255, 252, 243, 0) 49.82%,
-      rgba(255, 252, 243, 0.9) 82.11%
-    ),
-    radial-gradient(
-      41.58% 150.68% at 26.01% 45.34%,
-      rgba(255, 252, 243, 0.6) 19.17%,
-      rgba(255, 252, 243, 0) 100%
-    ),
-    linear-gradient(
-      84.14deg,
-      rgba(230, 148, 247, 0.2) 2.84%,
-      rgba(247, 161, 166, 0.2) 118.515%
-    ),
-    radial-gradient(
-      50% 120% at 100% 14.47%,
-      rgba(175, 155, 241, 0) 26.9%,
-      rgba(211, 199, 248, 0.9) 72.84%,
-      rgba(175, 155, 241, 0) 100%
-    ),
-    linear-gradient(
-      95.41deg,
-      rgba(160, 218, 140, 0) 19.21%,
-      #a0da8c 46.15%,
-      #a0da8c 63.7%,
-      rgba(160, 218, 140, 0) 83.72%
-    ),
-    radial-gradient(
-      56% 120% at 90% 112.47%,
-      rgba(255, 155, 130, 0) 26.9%,
-      rgba(255, 155, 130, 0.8) 72.84%,
-      rgba(255, 155, 130, 0) 100%
-    ),
-    radial-gradient(
-      35% 68% at 35% 84.47%,
-      #ffaf9b 49.82%,
-      rgba(251, 211, 199, 0) 82.11%
-    ),
-    linear-gradient(84.14deg, #e694f7 2.84%, #f7a1a6 118.515%);
-}
+  .check {
+    width: 1rem;
+    height: 1rem;
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #df4a96;
+    
+  }
+
+  .check:checked {
+    background-color: black;
+    
+  }
+
+  .check:hover {
+    opacity: 1;
+    border:#f652d6; 
+    box-shadow: 2px 2px 2px #eb94dc;
+  }
+  .task {
+    font-size: 18px;
+    padding: 0 10px;
+    width: fit-content;
+    background: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+  }
+
+  .task:focus {
+    outline: none;
+  }
+
+  .app ul li i {
+    float: right;
+    cursor: pointer;
+  }
+
+  .app ul li i:hover {
+    color: rgb(255, 82, 82);
+  }
+
+  .completed {
+    text-decoration: line-through;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn{
+    height:58px;
+    padding: 10px;
+    border-color: #df4a96;
+  }  
+ 
+  .task {
+    width: fit-content;
+    word-break: break-all;
+  }
+  
+  #ulcont {
+    display: flex;
+  }
+
+  .form-control{
+    height: 55px;
+    border-color: #df4a96;
+  }
+  .edit-icon{
+    font-size: 20pt;
+  }
+  
+  .task {
+    width: 100%;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    ul#ul-list {
+      position: relative;
+      left: -1rem;
+    }
+    input#name {
+      position: relative;
+      right: 0.6rem;
+    }
+  }
+  
